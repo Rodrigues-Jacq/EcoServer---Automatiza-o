@@ -36,7 +36,7 @@ else
 	systemctl restart apache2
 fi
 
-# instalação e configuração do servidor web
+# instalação e configuração do servidor samba
 if dpkg -l | grep samba >/dev/null
 then
 	echo
@@ -50,6 +50,9 @@ else
 	mkdir compartilhamento/samba; chmod -R 770 compartilhamento/samba
  	mv /etc/samba/smb.conf /etc/samba/smb.conf.bkp
   	touch /etc/samba/smb.conf
+   	echo "[global]" >> /etc/samba/smb.conf
+    	echo "netbios name = servidorSamba" >> /etc/samba/smb.conf
+     	echo "workgroup = WORKGROUP" >> /etc/samba/smb.conf
 	cd
 	echo
 fi
