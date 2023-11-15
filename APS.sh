@@ -29,7 +29,8 @@ else
 	cd /var/www/meu-site.net/public_html
 	apt install git -y
 	git clone https://github.com/Rodrigues-Jacq/EcoServer.git
-	mv * /var/www/meu-site.net/public_html/EcoServer
+	mv * /var/www/meu-site.net/public_html/EcoServer /var/www/meu-site.net/public_html
+ 	rm -rf /var/www/meu-site.net/public_html/EcoServer
 	a2ensite meu-site.net.conf
 	a2dissite 000-default.conf
 	systemctl restart apache2
