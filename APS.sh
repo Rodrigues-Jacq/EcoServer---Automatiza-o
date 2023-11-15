@@ -48,6 +48,8 @@ else
 	apt install samba -y
 	cd /; mkdir compartilhamento; chmod 775 compartilhamento
 	mkdir compartilhamento/samba; chmod -R 770 compartilhamento/samba
+ 	mv /etc/samba/smb.conf /etc/samba/smb.conf.bkp
+  	touch /etc/samba/smb.conf
 	cd
 	echo
 fi
