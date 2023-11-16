@@ -47,7 +47,7 @@ else
 	echo O pacote samba não está instalado. Vamos instá-lo e você conseguirá prosseguir com as atividades.
 	apt install samba -y
 	cd /; mkdir compartilhamento; chmod 775 compartilhamento
-	mkdir compartilhamento/samba; chmod -R 770 compartilhamento/samba
+	mkdir compartilhamento/samba; chmod -R 777 compartilhamento/samba
  	mv /etc/samba/smb.conf /etc/samba/smb.conf.bkp
   	touch /etc/samba/smb.conf
    	echo "[global]" >> /etc/samba/smb.conf
